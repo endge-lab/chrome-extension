@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endge Codegen</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <p class="popup__eyebrow">Endge Codegen</p>
+        <h1 class="popup__title">Генерация из текущей вкладки</h1>
+        <p id="extension-version" class="popup__version">Version</p>
+      </header>
+
+      <section class="popup__card">
+        <p class="popup__label">Текущая вкладка</p>
+        <p id="tab-status" class="popup__value">Проверяем...</p>
+        <p id="tab-url" class="popup__hint"></p>
+      </section>
+
+      <section class="popup__card">
+        <p class="popup__label">Локальный listener</p>
+        <p id="listener-status" class="popup__value">—</p>
+        <button id="connect-button" class="popup__button popup__button_connect" type="button" style="margin-top: 6px;">Подключиться</button>
+      </section>
+
+      <label class="popup__field">
+        <span class="popup__label">Полный путь до проекта</span>
+        <input id="output-root" class="popup__input" type="text" placeholder="/absolute/path/to/project" />
+      </label>
+
+      <div class="popup__actions">
+        <button id="refresh-button" class="popup__button popup__button_secondary" type="button">Обновить</button>
+        <button id="generate-button" class="popup__button" type="button">Сгенерировать</button>
+      </div>
+
+      <p id="message" class="popup__message"></p>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
