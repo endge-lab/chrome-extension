@@ -1,9 +1,16 @@
 {
   "name": "@endge/chrome-extension",
   "version": "0.1.1",
-  "private": true,
+  "private": false,
   "license": "Apache-2.0",
   "type": "module",
+  "files": [
+    "dist",
+    "src",
+    "static",
+    "scripts",
+    "tsconfig.json"
+  ],
   "scripts": {
     "clean": "node ./scripts/clean.mjs",
     "build": "pnpm run clean && tsc -p tsconfig.json && node ./scripts/prepare-dist.mjs",
